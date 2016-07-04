@@ -52,7 +52,7 @@ public class TrainMultiLayerConfigTest {
                         .nIn(4).nOut(3)
                         .activation("tanh")
                         .weightInit(WeightInit.XAVIER)
-                        .lossFunction(LossFunctions.LossFunction.RMSE_XENT)
+                        .lossFunction(LossFunctions.LossFunction.RMSE)
                         .build())
                 .layer(1, new OutputLayer.Builder(LossFunctions.LossFunction.MCXENT)
                         .nIn(3).nOut(3)

@@ -120,7 +120,7 @@ public class NeuralNetConfigurationTest {
                 .visibleUnit(RBM.VisibleUnit.GAUSSIAN)
                 .hiddenUnit(RBM.HiddenUnit.RECTIFIED)
                 .activation("tanh")
-                .lossFunction(LossFunctions.LossFunction.RMSE_XENT)
+                .lossFunction(LossFunctions.LossFunction.RMSE)
                 .build();
 
         NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder()
@@ -143,7 +143,7 @@ public class NeuralNetConfigurationTest {
                 .visibleUnit(RBM.VisibleUnit.GAUSSIAN)
                 .hiddenUnit(RBM.HiddenUnit.RECTIFIED)
                 .activation("tanh")
-                .lossFunction(LossFunctions.LossFunction.RMSE_XENT)
+                .lossFunction(LossFunctions.LossFunction.RMSE)
                 .build();
         NeuralNetConfiguration conf2 = new NeuralNetConfiguration.Builder()
                 .seed(123)
@@ -240,7 +240,7 @@ public class NeuralNetConfigurationTest {
                 .visibleUnit(RBM.VisibleUnit.GAUSSIAN)
                 .hiddenUnit(RBM.HiddenUnit.RECTIFIED)
                 .activation("tanh")
-                .lossFunction(LossFunctions.LossFunction.RMSE_XENT)
+                .lossFunction(LossFunctions.LossFunction.RMSE)
                 .build();
 
         NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder()

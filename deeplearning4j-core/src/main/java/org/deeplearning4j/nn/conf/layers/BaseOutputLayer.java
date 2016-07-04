@@ -21,7 +21,7 @@ public abstract class BaseOutputLayer extends FeedForwardLayer {
     }
     
     public static abstract class Builder<T extends Builder<T>> extends FeedForwardLayer.Builder<T> {
-        protected LossFunction lossFunction = LossFunction.RMSE_XENT;
+        protected LossFunction lossFunction = LossFunction.RMSE;
         protected String customLossFunction;
 
         public Builder() {}

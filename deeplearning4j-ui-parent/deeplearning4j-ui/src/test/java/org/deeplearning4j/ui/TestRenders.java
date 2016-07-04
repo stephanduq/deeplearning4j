@@ -79,7 +79,7 @@ public class TestRenders extends BaseUiServerTest {
                 .layer(new org.deeplearning4j.nn.conf.layers.AutoEncoder.Builder()
                         .nIn(784).nOut(600)
                         .corruptionLevel(0.6)
-                        .lossFunction(LossFunctions.LossFunction.RMSE_XENT).build())
+                        .lossFunction(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD).build())
                 .build();
 
 
@@ -105,7 +105,7 @@ public class TestRenders extends BaseUiServerTest {
                         .nIn(784).nOut(600)
                         .corruptionLevel(0.6)
                         .weightInit(WeightInit.XAVIER)
-                        .lossFunction(LossFunctions.LossFunction.RMSE_XENT).build())
+                        .lossFunction(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD).build())
                 .build();
 
 

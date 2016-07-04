@@ -60,7 +60,7 @@ public class ImageRenderTest {
                 .learningRate(1e-1).optimizationAlgo(OptimizationAlgorithm.CONJUGATE_GRADIENT)
                 .layer(new org.deeplearning4j.nn.conf.layers.RBM.Builder(RBM.HiddenUnit.BINARY, RBM.VisibleUnit.BINARY)
                         .nIn(784).nOut(400)
-                        .lossFunction(LossFunctions.LossFunction.RMSE_XENT).build())
+                        .lossFunction(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD).build())
                 .build();
 
 

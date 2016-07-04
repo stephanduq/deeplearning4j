@@ -222,7 +222,7 @@ public abstract class BaseOutputLayer<LayerConfT extends org.deeplearning4j.nn.c
                 triple = new Triple<>(gradient,outSubLabels,output);
                 break;
 
-            case RMSE_XENT: // root mean squared error cross entropy
+            case RMSE: // root mean squared error
                 INDArray squaredrmseXentDiff = pow(outSubLabels, 2.0);
                 INDArray sqrt = sqrt(squaredrmseXentDiff);
                 Nd4j.gemm(input,sqrt,weightGradView,true,false,1.0,0.0);    //Equivalent to: weightGradView.assign(input.transpose().mmul(sqrt));

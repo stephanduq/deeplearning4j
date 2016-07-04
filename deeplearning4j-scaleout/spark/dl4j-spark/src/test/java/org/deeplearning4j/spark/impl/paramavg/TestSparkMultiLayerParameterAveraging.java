@@ -124,7 +124,7 @@ public class TestSparkMultiLayerParameterAveraging extends BaseSparkTest {
                         .nIn(4).nOut(100)
                         .weightInit(WeightInit.XAVIER)
                         .activation("relu")
-                        .lossFunction(LossFunctions.LossFunction.RMSE_XENT).build())
+                        .lossFunction(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD).build())
                 .layer(1, new org.deeplearning4j.nn.conf.layers.OutputLayer.Builder(LossFunctions.LossFunction.MCXENT)
                         .nIn(100).nOut(3)
                         .activation("softmax")
